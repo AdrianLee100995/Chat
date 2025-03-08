@@ -29,4 +29,43 @@ socket.onclose = function(event) {
   li.append("The chat server stopped. It won't work anymore");
   messages.append(li);
   console.log("Chat stopped");
+};et.addEventListener('open', function (event) {
+  socket.send('Someone entered the chat.');
+});
+
+socket.onmessage = function (event) {
+  console.log(`${event.data} from ${event.origin}`);
+  const messages = document.getElementById("messages");
+  const li = document.createElement("li");
+  li.append(event.data)
+  messages.append(li);
 };
+
+socket.onclose = function(event) {
+  const messages = document.getElementById("messageet.addEventListener('open', function (event) {
+  socket.send('Someone entered the chat.');
+});
+
+socket.onmessage = function (event) {
+  console.log(`${event.data} from ${event.origin}`);
+  const messages = document.getElementById("messages");
+  const li = document.createElement("li");
+  li.append(event.data)
+  messages.append(li);
+};
+
+socket.onclose = function(event) {
+  const messages = document.getElementById("messageet.addEventListener('open', function (event) {
+  socket.send('Someone entered the chat.');
+});
+
+socket.onmessage = function (event) {
+  console.log(`${event.data} from ${event.origin}`);
+  const messages = document.getElementById("messages");
+  const li = document.createElement("li");
+  li.append(event.data)
+  messages.append(li);
+};
+
+socket.onclose = function(event) {
+  const messages = document.getElementById("message
